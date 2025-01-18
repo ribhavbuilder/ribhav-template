@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Toppers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .media-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .media-item video {
+            width: 100%;
+            height: auto;
+        }
+        .media-item a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .upload-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .upload-section input, .upload-section select {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Next Toppers Logo">
+        <h1>Next Toppers</h1>
+    </header>
+    <main>
+        <div class="upload-section">
+            <h2>Admin Upload Section</h2>
+            <form action="upload_content.php" method="post" enctype="multipart/form-data">
+                <label for="subject">Select Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="science">Science</option>
+                    <option value="social">Social</option>
+                    <option value="maths">Maths</option>
+                </select><br>
+
+                <label for="type">Select Content Type:</label>
+                <select id="type" name="type">
+                    <option value="video">Video</option>
+                    <option value="notes">Notes</option>
+                </select><br>
+
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file" accept="video/*,application/pdf"><br>
+
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+
+        <div class="section" id="science">
+            <h2>Science</h2>
+            <div class="sub-section">
+                <h3>Videos</h3>
+                <div class="media-item">
+                    <video controls>
+                        <source src="sample-science-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Sample Science Video</p>
+                </div>
+            </div>
+            <div class="sub-section">
+                <h3>Notes</h3>
+                <div class="media-item">
+                    <p><a href="sample-science-notes.pdf" target="_blank">View Science Notes</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="social">
+            <h2>Social</h2>
+            <div class="sub-section">
+                <h3>Videos</h3>
+                <div class="media-item">
+                    <video controls>
+                        <source src="sample-social-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Sample Social Video</p>
+                </div>
+            </div>
+            <div class="sub-section">
+                <h3>Notes</h3>
+                <div class="media-item">
+                    <p><a href="sample-social-notes.pdf" target="_blank">View Social Notes</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="maths">
+            <h2>Maths</h2>
+            <div class="sub-section">
+                <h3>Videos</h3>
+                <div class="media-item">
+                    <video controls>
+                        <source src="sample-maths-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Sample Maths Video</p>
+                </div>
+            </div>
+            <div class="sub-section">
+                <h3>Notes</h3>
+                <div class="media-item">
+                    <p><a href="sample-maths-notes.pdf" target="_blank">View Maths Notes</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Next Toppers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
